@@ -1,6 +1,8 @@
 FROM metabase/metabase:latest
 
-COPY docker-entrypoint.sh /app/
+WORKDIR /app
+
+COPY docker-entrypoint.sh .
 
 RUN ["chmod", "+x", "/app/docker-entrypoint.sh"]
 
